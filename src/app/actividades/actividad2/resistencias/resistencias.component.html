@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="col-6">
+        <div class="card card1">
+            <div class="card-header">
+                <h2>Calculadora de Resistencias</h2>
+            </div>
+            <div class="card-body">
+                <div>
+                    <select name="cbmbBanda1" class="form-control" [(ngModel)]="banda1" (change)="calcularValor(tolerancia)">
+                        <option [value]="item" *ngFor="let item of colores let indice1=index;"
+                        [style.background-color]="item">{{item}}
+                        </option>
+                    </select>
+                    <select name="cbmbBanda2" class="form-control mt-3" [(ngModel)]="banda2" (change)="calcularValor(tolerancia)">
+                        <option [value]="item" *ngFor="let item of colores let indice1=index;"
+                        [style.background-color]="item">{{item}}
+                        </option>
+                    </select>
+                    <select name="cbmbBanda3" class="form-control mt-3" [(ngModel)]="banda3" (change)="calcularValor(tolerancia)">
+                        <option [value]="item" *ngFor="let item of colores let indice1=index;"
+                        [style.background-color]="item">{{item}}
+                        </option>
+                    </select>
+                </div>
+                <div> 
+                    <mat-radio-group name="Tolerancia" [(ngModel)]="tolerancia" (change)="calcularValor(tolerancia)">
+                        <mat-radio-button *ngFor="let op of tipoTolerancia" [value]="op" name="tolerancia" style="margin: 10px">
+                            {{op}}
+                        </mat-radio-button>
+                    </mat-radio-group>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card card1">
+            <div class="card-header">
+                <h2>Resultados</h2>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Banda 1</th>
+                        <th scope="col">Banda 2</th>
+                        <th scope="col">Banda 3</th>
+                        <th scope="col">Tolerancia</th>
+                        <th scope="col">Min</th>
+                        <th scope="col">Valor</th>
+                        <th scope="col">Max</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td [style.background-color]="banda1">{{banda1}}</td>
+                        <td [style.background-color]="banda2">{{banda2}}</td>
+                        <td [style.background-color]="banda3">{{banda3}}</td>
+                        <td [style.background-color]="tolerancia">{{tolerancia}}</td>
+                        <td>{{min}}</td>
+                        <td>{{res}}</td>
+                        <td>{{max}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</div>

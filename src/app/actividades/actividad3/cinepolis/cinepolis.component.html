@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-6">
+        <div class="card card1">
+            <div class="card-header">
+                <h2>Cineco</h2>
+            </div>
+            <div class="card-body">
+                <div class="container">
+                    <mat-form-field>
+                        <input matInput [(ngModel)]='nombre' type="text" placeholder="nombre" (change)="calcularCosto(trjCineco)">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput [(ngModel)]='numClientes' type="number" placeholder="Numero de clientes" (change)="calcularCosto(trjCineco)">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput [(ngModel)]='numBoletos' type="number" placeholder="Numero de boletos" (change)="calcularCosto(trjCineco)">
+                    </mat-form-field>
+                </div>
+                <div> 
+                    <mat-radio-group name="trjCineco" [(ngModel)]="trjCineco" (change)="calcularCosto(trjCineco)">
+                        <mat-radio-button *ngFor="let op of opcsCineco" [value]="op" name="opcCineco" style="margin: 10px">
+                            {{op}}
+                        </mat-radio-button>
+                    </mat-radio-group>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card card1">
+            <div class="card-header">
+                <h2>Respuesta</h2>
+            </div>
+            <div class="card-body">
+                <h3>{{respuesta}}</h3>
+            </div>
+        </div>
+    </div>
+</div>

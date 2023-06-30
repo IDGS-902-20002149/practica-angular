@@ -1,0 +1,16 @@
+<div class="container">
+    <mat-form-field>
+      <input matInput [(ngModel)] = 'x1' type="number" placeholder="x1">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [(ngModel)] = 'y1' type="number" placeholder="y1">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [(ngModel)] = 'x2' type="number" placeholder="x2">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [(ngModel)] = 'y2' type="number" placeholder="y2">
+      </mat-form-field>
+    <button mar-raised-button color="primary" (click)="calcularDictancia()" >Calcular</button>
+    <h1><p>El resultado es: {{result}}</p></h1>
+  </div>
