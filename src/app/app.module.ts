@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DospuntosModule } from './actividades/actividad1/dospuntos/dospuntos.module';
 import { ResistenciasMModule } from './actividades/actividad2/resistencias-m/resistencias-m.module';
 import { CineModule } from './actividades/actividad3/cine/cine.module';
+import { PizzasmModule } from './actividades/actividad4/pizzasm/pizzasm.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuComponent } from './actividades/menu/menu.component';
@@ -21,7 +22,8 @@ import { MenuComponent } from './actividades/menu/menu.component';
     BrowserAnimationsModule,
     DospuntosModule,
     ResistenciasMModule,
-    CineModule
+    CineModule,
+    PizzasmModule
   ],
   providers: [],
   bootstrap: [AppComponent]
